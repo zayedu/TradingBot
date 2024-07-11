@@ -37,7 +37,7 @@ class MLTrader(Strategy):
         today = self.get_datetime()
         three_days_prior = today - Timedelta(days = 3)
         return today.strftime("%Y-%m-%d"), three_days_prior.strftime("%Y-%m-%d")
-    def get_news(self):
+    def get_sentiment(self):
         today,three_days_prior = self.get_dates()
         news = self.api.get_news(symbol = self.symbol, start = three_days_prior , end = today)
         headlines = [news_item.__dict__['_raw']['headline'] for news_item in news]
@@ -47,7 +47,6 @@ class MLTrader(Strategy):
         if cash > last_price:
             if self.last_trade is None:
                 news = self.get_news()
-                print(news)
                 order = self.create_order(
                     self.symbol,
                     quantity,
