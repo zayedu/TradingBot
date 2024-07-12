@@ -1,0 +1,53 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="jumbotron text-center">
+    <h1>Welcome to PocketTrader</h1>
+    <p>PocketTrader currently supports backtrading, enter a start and end date and see how PocketTraders ML Algorithm does</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Backtrading</h3>
+            <p>Try out PocketTraders ML Strategy on a period of time from the stock market</p>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" min="2010-01-01">
+            <br>
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" min="2010-01-01">
+            <br>
+            <button type="button" class="btn btn-primary" id="backtrade-button">Backtrade</button>
+
+        </div>
+
+        <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor..</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('start-date').addEventListener('change', function() {
+        document.getElementById('end-date').min = this.value;
+    });
+</script>
+
+<script>
+    document.getElementById('backtrade-button').addEventListener('click', function() {
+        var startDate = document.getElementById('start-date').value;
+        var endDate = document.getElementById('end-date').value;
+        fetch(`/backtrade/${startDate}/${endDate}`)
+            .then(response => response.text())
+            .then(data => {
+                document.body.innerHTML = data;
+            });
+    });
+</script>
