@@ -17,12 +17,13 @@
         <div class="col-sm-4">
             <h3>Tradesheet</h3>
             <p>View the trade sheet results from your backtrade</p>
-            <button type="button" class="btn btn-primary" id="tradesheet-button">Trade sheet</button>
+            <a type="button" class="btn btn-primary" id="tradesheet-button" href="{{ url_for('static', filename=file2) }}" target = "_blank">Trade sheet</a>
         </div>
         <div class="col-sm-4">
             <h3>Tear sheet</h3>
             <p>View the tear sheet results from your backtrade</p>
-            <button type="button" class="btn btn-primary" id="tearsheet-button">Tear sheet</button>
+
+            <a type="button" class="btn btn-primary" id="tearsheet-button" href="{{ url_for('static', filename=file1) }}" target = "_blank">Tear sheet</a>
         </div>
     </div>
 </div>

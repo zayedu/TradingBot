@@ -6,8 +6,12 @@ from datetime import datetime
 from alpaca_trade_api import REST
 from timedelta import Timedelta
 from algorithm.finbert_utils import estimate_sentiment
+import json
+import pprint
 
 import algorithm.Secrets as Secrets
+
+
 
 API_KEY = Secrets.API_KEY
 API_SECRET = Secrets.API_SECRET
@@ -83,12 +87,10 @@ class MLTrader(Strategy):
 def run(start_date, end_date):
     broker = Alpaca(ALPACA_CREDS)
     strategy = MLTrader(name='mlstrat', broker=broker,
-                        parameters={"symbol": "AAPL",
+                        parameters={"symbol": "SPY",
                                     "cash_at_risk": 0.5})
     results, strategy = strategy.backtest(
         YahooDataBacktesting,
         start_date,
         end_date
     )
-
-    return results,strategy
