@@ -89,7 +89,7 @@ def run(start_date, end_date):
     strategy = MLTrader(name='mlstrat', broker=broker,
                         parameters={"symbol": "SPY",
                                     "cash_at_risk": 0.5})
-    results, strategy = strategy.backtest(
+    strategy.backtest(
         YahooDataBacktesting,
         start_date,
         end_date
