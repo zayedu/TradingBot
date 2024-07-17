@@ -6,3 +6,4 @@ timedelta==2020.12.3
 torch==2.3.1+cpu
 transformers==4.42.3
 ipython==8.26.0
+gunicorn==20.1.0
