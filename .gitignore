@@ -21,6 +21,7 @@ venv.bak/
 .DS_Store
 utils.py
 Secrets.py
+Static/*.html
 # IDEs
 .idea/
 .vscode/
