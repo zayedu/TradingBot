@@ -1,7 +1,7 @@
-# MLTrader
+# Pocket Trader
 
 ## Overview
-MLTrader is a Machine Learning-based trading algorithm that utilizes PyTorch and Hugging Face's Transformers Library for sentiment analysis to make trading decisions. It processes stock data from the Alpaca Trading API over the past three days, performs sentiment analysis, and then makes informed trading decisions. The trading operations are executed by Lumibot, with accurate stock market data sourced from YahooFinance. This full-stack application is built using Flask, allowing users to select backtesting dates, view detailed tradesheets, and tear sheets of the algorithm's performance.
+Po is a Machine Learning-based trading algorithm that utilizes PyTorch and Hugging Face's Transformers Library for sentiment analysis to make trading decisions. It processes stock data from the Alpaca Trading API over the past three days, performs sentiment analysis, and then makes informed trading decisions. The trading operations are executed by Lumibot, with accurate stock market data sourced from YahooFinance. This full-stack application is built using Flask, allowing users to select backtesting dates, view detailed tradesheets, and tear sheets of the algorithm's performance.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -13,7 +13,7 @@ MLTrader is a Machine Learning-based trading algorithm that utilizes PyTorch and
 - [Contact](#contact)
 - [License](#license)
 ## Demo
-![MLTrader Demo](Assets/PocketTraderDemo.gif)
+![Pocket Trader Demo](Assets/PocketTraderDemo.gif)
 
 ## Features
 - **Sentiment Analysis:** Utilizes Hugging Face's Transformers Library for sentiment analysis on stock data.
@@ -27,7 +27,7 @@ MLTrader is a Machine Learning-based trading algorithm that utilizes PyTorch and
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/zayedu/TradingBot.git
-   cd MLTrader
+   cd Pocket Trader
    ```
 2. **Set up a virtual environment:**
    ```sh
