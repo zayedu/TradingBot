@@ -88,9 +88,11 @@ def run(start_date, end_date):
     broker = Alpaca(ALPACA_CREDS)
     strategy = MLTrader(name='mlstrat', broker=broker,
                         parameters={"symbol": "SPY",
-                                    "cash_at_risk": 0.5})
+                                    "cash_at_risk": 0.5},)
     strategy.backtest(
         YahooDataBacktesting,
         start_date,
-        end_date
+        end_date,
+        show_tearsheet= False,
+
     )
