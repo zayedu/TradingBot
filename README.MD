@@ -12,7 +12,6 @@ MLTrader is a Machine Learning-based trading algorithm that utilizes PyTorch and
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [License](#license)
-
 ## Demo
 ![MLTrader Demo](Assets/PocketTraderDemo.gif)
 
